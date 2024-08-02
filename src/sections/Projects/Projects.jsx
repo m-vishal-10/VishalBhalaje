@@ -11,7 +11,7 @@ function Projects() {
 
         <ProjectCard src={Viberr} link="https://github.com/m-vishal-10/NewsFeed" h3="News Feed" p="NewsApp with Preference List"/>
 
-        <ProjectCard src={Viberr} link="https://github.com/m-vishal-10/digital-assistant-for-legal-awareness" h3="Digital Awareness" p="Digital Awareness App"/>
+        <ProjectCard src={Viberr} link="https://github.com/m-vishal-10/digital-assistant-for-legal-awareness" h3="Digital Awareness" p="Digital App Legal Awareness"/>
 
       </div>
     </section>
