@@ -1,0 +1,110 @@
+/* ExperienceStyles.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+  
+  .cardContainer {
+    padding: 20px 40px;
+    position: relative;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .left {
+    flex-direction: row-reverse;
+    text-align: right;
+    margin-left: auto;
+  }
+  
+  .right {
+    flex-direction: row;
+    text-align: left;
+    margin-right: auto;
+  }
+  
+  .textBox {
+    padding: 30px 40px;
+    background: var(--background-color);
+    position: relative;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  .textBox h2 {
+    font-size: 24px;
+  }
+  
+  .textBox p {
+    font-size: 16px;
+  }
+  
+  .timelineImage {
+    width: 80px;
+    height: 80px;
+    margin: 0 20px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--timeline-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .cardContainer::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--timeline-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .timeline {
+      margin: 20px auto;
+    }
+  
+    .cardContainer {
+      width: 90%;
+      flex-direction: column;
+      text-align: center;
+      margin: 20px 0;
+    }
+  
+    .left, .right {
+      margin: 0;
+      flex-direction: column;
+    }
+  
+    .timelineImage {
+      margin: 10px 0;
+    }
+  
+    .cardContainer::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
