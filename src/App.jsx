@@ -8,13 +8,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 function App() {
   
   return (
-    <Router basename="/VishalBhalaje">
+    <>
     <Hero />
     <Projects />
     <Skills/>
     <Contact/>
     <Footer/>
-    </Router>
+    </>
   )
 }
 
