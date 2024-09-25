@@ -1,6 +1,7 @@
 import React from "react";
 import NewsFeed from "../../assets/news-feed.png"
 import DigitalLaw from "../../assets/digital-law.jpg"
+import MentorConnect from "../../assets/mentor-connect.png"
 import styles from './ProjectsStyles.module.css';
 import ProjectCard from '../../common/ProjectCard';
 
@@ -13,6 +14,8 @@ function Projects() {
         <ProjectCard src={NewsFeed} link="https://github.com/m-vishal-10/NewsFeed" h3="News Feed" p="NewsApp with Preference List"/>
 
         <ProjectCard src={DigitalLaw} link="https://github.com/m-vishal-10/digital-assistant-for-legal-awareness" h3="Digital Awareness" p="Digital App Legal Awareness"/>
+
+        <ProjectCard src={MentorConnect} link="https://github.com/m-vishal-10/digital-assistant-for-legal-awareness" h3="Mentor Connect" p="Platform to Connect Mentor and Mentee"/>
 
       </div>
     </section>
