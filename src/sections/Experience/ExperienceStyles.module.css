@@ -1,0 +1,126 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+/* Styling for each timeline card */
+.cardContainer {
+    display: flex; /* Flexbox for layout */
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 45%; /* Card width */
+    position: relative;
+}
+
+.left {
+    margin-left: 0;
+    margin-right: auto; /* Align to the left */
+    justify-content: flex-start; /* Justify items to the start */
+}
+
+.right {
+    margin-left: auto; /* Align to the right */
+    margin-right: 0;
+    justify-content: flex-end; /* Justify items to the end */
+}
+
+.timelineImage {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular images */
+    margin-right: 20px; /* Margin for spacing */
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center;
+}
+
+.textBox h2 {
+    margin: 0;
+    font-size: 1.5rem; /* Title size */
+}
+
+.textBox p {
+    margin: 4px 0;
+    font-size: 1rem;
+    color: var(--text-color-secondary);
+}
+
+/* Vertical line in the middle of the timeline */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%; /* Positioning the line */
+    top: 0;
+    transform: translateX(-50%); /* Centering the line */
+    width: 4px;
+    height: 100%;
+    background-color: var(--btn-color); /* Color of the line */
+    z-index: -1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px; /* Shift the line for smaller screens */
+        transform: none;
+    }
+
+    .cardContainer {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        width: 100%; /* Full width for cards */
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .timelineImage {
+        margin: 10px 0 0 0; /* Margin adjustments for images */
+    }
+}
+
+@media (max-width: 480px) {
+    .textBox h2 {
+        font-size: 1.2rem; /* Adjusted title size */
+    }
+
+    .textBox p {
+        font-size: 0.9rem; /* Adjusted paragraph size */
+    }
+
+    /* Additional adjustments for mobile to ensure image is at the bottom */
+    .cardContainer {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .timelineImage {
+        order: 1; /* Ensure image appears last */
+        margin: 10px 0 0 0; /* Margin for image on top */
+    }
+
+    .textBox {
+        order: 0; /* Ensure text box appears first */
+    }
+}

@@ -5,6 +5,7 @@ import Skills from './sections/Skills/Skills'
 import Contact from './sections/Contact/Contact'
 import Footer from './sections/Footer/Footer'
 import { BrowserRouter as Router } from 'react-router-dom';
+import Experience from './sections/Experience/Experience'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Projects />
         <Skills/>
+        <Experience/>
         <Contact/>
         <Footer/>
       </>
