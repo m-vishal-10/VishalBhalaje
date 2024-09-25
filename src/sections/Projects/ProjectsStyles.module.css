@@ -4,7 +4,9 @@
   text-align: center;
 
   img {
-    max-width: 250px;
+    width: 250px; /* Make sure all images have the same width */
+    height: 200px; /* Ensure consistent height */
+    object-fit: cover; /* Ensures images keep their aspect ratio but are cropped if needed */
     align-self: center;
     background-color: var(--project-card-bg);
     border-radius: 20px;
