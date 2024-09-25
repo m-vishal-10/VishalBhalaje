@@ -39,7 +39,7 @@ function Hero() {
         <h1>Vishal <br /> Bhalaje</h1>
         <h2>Android app Developer</h2>
         <span>
-            <a href="https://x.com/bhalaje_m38295" target="_blank">
+            <a href="https://x.com/vishal_bhalaje" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
             </a>
             <a href="https://github.com/m-vishal-10" target="_blank">
