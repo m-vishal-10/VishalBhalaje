@@ -1,36 +1,36 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-    height: 100dvh;
-    min-height: 500px;
-  
-    .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  height: 100dvh;
+  min-height: 500px;
+
+  .hero {
       max-width: 200px;
-    }
-  
-    span {
+  }
+
+  span {
       display: flex;
       gap: 25px;
       justify-content: center;
-  
+
       a {
-        margin: 0;
-  
-        img {
-          width: 30px;
-        }
+          margin: 0;
+
+          img {
+              width: 30px;
+          }
       }
-    }
-  
-    a {
+  }
+
+  a {
       width: fit-content;
       align-self: center;
-    }
-  
-    button {
+  }
+
+  button {
       background-color: var(--btn-color);
       color: var(--btn-text-color);
       border: none;
@@ -41,60 +41,70 @@
       font-weight: bold;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-    }
-  
-    button:hover {
+  }
+
+  button:hover {
       transform: scale(1.05);
-    }
-  
-    button:active {
+  }
+
+  button:active {
       transform: translateY(2px);
       box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-    }
   }
-  
-  .colorModeContainer {
-    position: relative;
-  }
-  
-  .colorMode {
-    position: absolute;
-    right: 0;
-    width: 25px;
-  }
-  
-  .colorMode:hover {
-    cursor: pointer;
-  }
-  
-  .description {
-    max-width: 24ch;
-  }
-  
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  @media (width >= 800px) {
-    .container {
+}
+
+.colorModeContainer {
+  position: relative;
+}
+
+.colorMode {
+  position: absolute;
+  right: 0;
+  width: 25px;
+}
+
+.colorMode:hover {
+  cursor: pointer;
+}
+
+.description {
+  max-width: 24ch;
+  margin: 0 auto; /* Ensure it is centered on larger screens */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px; /* Padding for smaller screens to avoid text touching edges */
+}
+
+@media (width >= 800px) {
+  .container {
       flex-direction: row-reverse;
       align-items: center;
       justify-content: space-evenly;
-  
+
       .hero {
-        max-width: 350px;
-        width: 350px;
+          max-width: 350px;
+          width: 350px;
       }
-    }
+
+      .description {
+          max-width: 40ch; /* Expand width on larger screens */
+      }
   }
-  
-  @media (width >= 1400px) {
-    .container {
+}
+
+@media (width >= 1400px) {
+  .container {
       .hero {
-        max-width: 400px;
-        width: 400px;
+          max-width: 400px;
+          width: 400px;
       }
-    }
+
+      .description {
+          max-width: 50ch; /* Even more room for large screens */
+      }
   }
+}
